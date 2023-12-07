@@ -1,0 +1,60 @@
+﻿@model BeanandBrewV2.Models.Coffee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+@using(Html.BeginForm("Create","Coffees",FormMethod.Post, new { @enctype = "multipart/form-data"}))
+{
+    <h1>Create</h1>
+
+    <h4>Coffee</h4>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CoffeeName" class="control-label"></label>
+                    <input asp-for="CoffeeName" class="form-control" />
+                    <span asp-validation-for="CoffeeName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CoffeePrice" class="control-label"></label>
+                    <input asp-for="CoffeePrice" class="form-control" />
+                    <span asp-validation-for="CoffeePrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CoffeeSize" class="control-label"></label>
+                    <input asp-for="CoffeeSize" class="form-control" />
+                    <span asp-validation-for="CoffeeSize" class="text-danger"></span>
+                </div>
+                <div>
+                    <label class="control-label">Image</label>
+                    <input type="file" name="userFile" id="userFile" class="form-control">
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+                <br>
+
+
+            </form>
+        </div>
+    </div>
+    
+}
+
+
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
