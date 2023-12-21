@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BeanandBrewV2.Data;
 using BeanandBrewV2.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace BeanandBrewV2.Controllers
 {
     public class CoffeeOrdersController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public CoffeeOrdersController(ApplicationDbContext context)
+        public CoffeeOrdersController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: CoffeeOrders
@@ -159,5 +162,20 @@ namespace BeanandBrewV2.Controllers
         {
           return (_context.CoffeeOrder?.Any(e => e.OrderId == id)).GetValueOrDefault();
         }
+
+        [Route("/order/coffee/{CoffeeId}")]
+
+        public async Task<IActionResult> Order(int CoffeeId)
+        {
+            CoffeeOrder order = new CoffeeOrder();
+            order.CoffeeAmount = 0;
+            order.CoffeeId = CoffeeId;
+            order.User = await _userManager.GetUserAsync(User);
+            order.UserId = _userManager.GetUserAsync(User).Result!.Id;
+            _context.Add(order);
+            await _context.SaveChangesAsync();
+            return Redirect("/");
+        }
     }
+
 }

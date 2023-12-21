@@ -64,11 +64,35 @@ namespace BeanandBrewV2.Data.Migrations
                     b.Property<string>("CoffeeName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("OrderId");
 
                     b.HasIndex("CoffeeId");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("CoffeeOrder");
+                });
+
+            modelBuilder.Entity("BeanandBrewV2.Models.Lesson", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("LessonDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Lesson");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -135,6 +159,10 @@ namespace BeanandBrewV2.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -186,6 +214,10 @@ namespace BeanandBrewV2.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -273,6 +305,22 @@ namespace BeanandBrewV2.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BeanandBrewV2.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StaffPermision")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
             modelBuilder.Entity("BeanandBrewV2.Models.CoffeeOrder", b =>
                 {
                     b.HasOne("BeanandBrewV2.Models.Coffee", null)
@@ -280,6 +328,12 @@ namespace BeanandBrewV2.Data.Migrations
                         .HasForeignKey("CoffeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("BeanandBrewV2.Models.ApplicationUser", "User")
+                        .WithMany("CoffeeOrders")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -334,6 +388,11 @@ namespace BeanandBrewV2.Data.Migrations
                 });
 
             modelBuilder.Entity("BeanandBrewV2.Models.Coffee", b =>
+                {
+                    b.Navigation("CoffeeOrders");
+                });
+
+            modelBuilder.Entity("BeanandBrewV2.Models.ApplicationUser", b =>
                 {
                     b.Navigation("CoffeeOrders");
                 });

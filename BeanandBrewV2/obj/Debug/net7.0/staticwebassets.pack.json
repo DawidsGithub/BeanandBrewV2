@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Student\\source\\repos\\BeanandBrewV2\\BeanandBrewV2\\wwwroot\\images\\Americano_Thumb.png",
+      "PackagePath": "staticwebassets\\images\\Americano_Thumb.png"
+    },
+    {
+      "Id": "C:\\Users\\Student\\source\\repos\\BeanandBrewV2\\BeanandBrewV2\\wwwroot\\images\\Flat_Black_Thumb.png",
+      "PackagePath": "staticwebassets\\images\\Flat_Black_Thumb.png"
+    },
+    {
+      "Id": "C:\\Users\\Student\\source\\repos\\BeanandBrewV2\\BeanandBrewV2\\wwwroot\\images\\Mocha_Thumb.png",
+      "PackagePath": "staticwebassets\\images\\Mocha_Thumb.png"
+    },
+    {
+      "Id": "C:\\Users\\Student\\source\\repos\\BeanandBrewV2\\BeanandBrewV2\\wwwroot\\js\\CoffeeOrder.js",
+      "PackagePath": "staticwebassets\\js\\CoffeeOrder.js"
+    },
+    {
       "Id": "C:\\Users\\Student\\source\\repos\\BeanandBrewV2\\BeanandBrewV2\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

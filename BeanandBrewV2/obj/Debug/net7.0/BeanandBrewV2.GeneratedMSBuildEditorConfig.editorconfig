@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Student\source\repos\BeanandBrewV2\BeanandBrewV2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,6 +90,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Lessons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Lessons/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Lessons/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Lessons/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Lessons/Index - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xJbmRleCAtIENvcHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Lessons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Student/source/repos/BeanandBrewV2/BeanandBrewV2/Views/Shared/Error.cshtml]

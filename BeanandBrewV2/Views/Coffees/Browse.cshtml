@@ -6,17 +6,31 @@
 
 <h1>Browse</h1>
 
-<div class="row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+<div class="container">
+<div class="text-center">
     @foreach (var item in Model)
     {
         <div class="col">
-
-                    <h3 class="text-center">@Html.DisplayFor(modelItem => item.CoffeeName)</h3>
-
-                    <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePath)" />
-
-                    <h3 class="text-center">@Html.DisplayFor(modelItem => item.CoffeePrice)</h3>
+            <table class="table">
+                <tr>
+                    <td>
+                        <h3 class="text-center">@Html.DisplayFor(modelItem => item.CoffeeName)</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <a asp-area="" asp-controller="Home" asp-action="Index"><img width="300px" height="300px" src="~/images/@Html.DisplayFor(modelItem => item.ImagePath)" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <h5 class="text-center">@Html.DisplayFor(modelItem => item.CoffeePrice)</h5>
+                        <button class="btn btn-info" onclick="orderCoffee(event)" id="@Html.DisplayFor(modelItem => item.CoffeeId)">Purchase</button>
+                    </td>
+                </tr>
+            </table>
 
         </div>
     }
+</div>
 </div>
